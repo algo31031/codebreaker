@@ -1,0 +1,6 @@
+#!/home/hanbing/.rvm/rubies/ruby-1.8.7-p374-rg137/bin/ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+require 'codebreaker'
+
+game = Codebreaker::Game.new(STDOUT)
+game.start
