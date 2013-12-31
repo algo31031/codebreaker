@@ -64,7 +64,15 @@ module Codebreaker
           maker = Maker.new("1234", "1525")
           maker.number_match_count.should == 1     
         end
-      end      
+      end  
+
+      context "with 1 exact match duplicated in guess" do 
+        it "return 0" do
+          # pending("refactor number_match_count")
+          maker = Maker.new("1234", "1155")
+          maker.number_match_count.should == 0 
+        end
+      end    
 
     end    
 
