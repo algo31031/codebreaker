@@ -1,6 +1,7 @@
 # Part I 笔记
 
 ### The RSpec Book的推荐使用环境:
+
 Ruby and Gem Versions:    
 > ruby-1.8.7 1  
 > rubygems-1.3.7  
@@ -29,9 +30,11 @@ rspec [options] [files or directories]
 
 ### Rails项目下安装RSpec
 在 Gemfile文件下添加:  
->group :development, :test do  
->  gem 'rspec-rails', '~> 3.0.0.beta'  
->end  
+
+>
+    group :development, :test do
+      gem 'rspec-rails', '~> 3.0.0.beta'
+    end
 
 运行`script/rails generate rspec:install`  
 会在项目跟目录下生成 spec/spec_helper.rb 与 .rspec  
