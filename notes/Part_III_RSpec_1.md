@@ -1,4 +1,4 @@
-# Part I RSpec 
+# Part III RSpec 1
 
 ##Chapter 12 Code Examples
 
@@ -168,5 +168,7 @@
 
 >
     around do |example|
-      DB.transaction { example.run }
+      # do something
+      example.run 
+      # do something else
     end
