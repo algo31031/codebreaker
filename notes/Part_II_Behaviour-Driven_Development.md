@@ -18,3 +18,5 @@
 >in order to [benefit],  
 >a [stakeholder]  
 >wants to [feature].  
+
+更推荐后者，因为其更突出行为的目的。

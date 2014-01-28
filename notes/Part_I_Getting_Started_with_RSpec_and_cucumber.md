@@ -38,11 +38,11 @@ rspec [options] [files or directories]
 
 运行`script/rails generate rspec:install`  
 会在项目跟目录下生成 spec/spec_helper.rb 与 .rspec  
-.rspec文件为RSpec的配置文件, 可以放在项目根目录下, 或放在主目录/home/xxx/
+.rspec文件为RSpec的配置文件, 可以放在项目根目录下, 或放在主目录/home/xxx/下
 
 ***
 
-### Enumerable#inject  
+### 书里提到的 Enumerable#inject  
 Combines all elements of enum by applying a binary operation, specified by a block or a symbol that names a method or operator.
 
 If you specify a block, then for each element in enum<i> the block is passed an accumulator value (<i>memo) and the element. If you specify a symbol instead, then each element in the collection will be passed to the named method of memo. In either case, the result becomes the new value for memo. At the end of the iteration, the final value of memo is the return value fo the method.

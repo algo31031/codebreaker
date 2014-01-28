@@ -2,11 +2,11 @@
 
 ##Chapter 12 Code Examples
 
-###关键词  
+###名词解释  
 **subject code** 以RSpec描述出其行为的代码  
 **expectation** 等同于 Assertion(断言)  
 **code example** 等同于 Test method,用来展示**subject code**的作用,并通过**expectation**表现其行为  
-**example group** 等同于 Test case, 一组**example**  
+**example group** 等同于 Test case, 一组**code example**  
 **spec** spec文件, 包含一个或多个**example group**  
 
 例如:  
@@ -19,8 +19,8 @@
       end
     end
 
-`describe`方法定义了一个 example group , 传入的字符串代表我们要表述的系统的 facet(新账户), 在其代码块中包含**code example**  
-`it`方法定义**code example**, 传入的字符串用来描述我们所关心的 facet 的行为(余额为0), 在其代码块中使用了**expectation**  
+`describe`方法定义了一个**example group**, 传入的字符串代表我们要表述的系统的facet(一个新账户), 在其代码块中包含**code example**  
+`it`方法定义**code example**, 传入的字符串用来描述我们所关心的facet的行为(余额应为0), 在其代码块中使用了**expectation**(account.balance.should == Money.new(0, :USD))  
 
 
 ###describe 方法
@@ -60,7 +60,7 @@
       with no roles assigned
         is not allowed to view protected content
 
-**context**方法是 describe 方法的别名,一般倾向于事物用 describe, 背景(条件)用 context,  
+**context**方法是 describe 方法的别名,一般倾向于用describe描述事物, 用context表述背景(条件),  
 于是上面的例子一般来说会写作:  
 
 >
@@ -70,7 +70,7 @@
 
 ###it 方法
 参数形似与 describe 方法相同  
-其中其字符串参数为以'it'开头的一句话, 用来描述代码块中代码的细节  
+其字符串参数为以'it'开头的一句话, 用来描述代码块中代码的细节  
 
 
 ###Pending Examples  
@@ -145,7 +145,7 @@
 **before(:all)**  
 只运行一次, 但在其中的实例变量会被copy到每个example下  
 
-简而言之, 除非特殊情况(如建立网络连接), 尽量都用before(:each)
+简而言之, 除非特殊情况(如建立DB连接), 尽量都用before(:each)
 
 **after(:each)**  
 不常用, 在其中的代码一定会执行, 可用于恢复全局变量状态  
