@@ -87,7 +87,7 @@
 >
     Newspaper
       should be read all over (PENDING: Not Yet Implemented)  
-
+>
     Pending:
       Newspaper should be read all over
         # Not Yet Implemented
@@ -127,12 +127,12 @@
 
 >
     F
-
+>
     Failures:
       1) an empty array should be empty FIXED
         Expected pending 'bug report 18976' to fail. No Error was raised.
         # ./pending_fixed.rb:4
-
+>
     Finished in 0.00088 seconds
     1 example, 1 failure
 
@@ -155,7 +155,7 @@
       @original_global_value = $some_global_value
       $some_global_value = temporary_value
     end
-
+>
     after(:each) do
       $some_global_value = @original_global_value
     end

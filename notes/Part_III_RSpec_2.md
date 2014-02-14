@@ -69,3 +69,34 @@
         ...
       end
     end
+
+**共享 Helper Methods**
+
+为了能够在example groups之间共享Helper Methods, 我们可以将Helper Methods定义在module里, 并在需要使用这些方法的时候, 在example groups里面include相应的module.  
+
+例如:
+
+>
+    module UserExampleHelpers
+      def create_valid_user
+        User.new(:email => 'email@example.com', :password => 'shhhhh')
+      end
+>
+      def create_invalid_user
+        User.new(:password => 'shhhhh')
+      end
+    end
+>    
+    describe User do
+      include UserExampleHelpers
+>
+      it "does something when it is valid" do
+        user = create_valid_user
+        # do stuff
+      end
+>
+      it "does something when it is not valid" do
+        user = create_invalid_user
+        # do stuff
+      end
+
