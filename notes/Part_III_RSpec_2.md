@@ -86,6 +86,7 @@
         User.new(:password => 'shhhhh')
       end
     end
+
 >    
     describe User do
       include UserExampleHelpers
@@ -100,3 +101,9 @@
         # do stuff
       end
 
+如果所有example groups都希望用到某个module的helper methods，也可以把这个module include到configuration里
+
+>
+    RSpec.configure do |config|
+      config.include(UserExampleHelpers)
+    end

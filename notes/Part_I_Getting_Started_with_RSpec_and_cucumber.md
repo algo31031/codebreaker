@@ -14,7 +14,24 @@ Ruby and Gem Versions:
 > selenium-client-1.2.18  
 > rails-3.0.0  
 
+gem install rspec -v 2.0.0 --no-ri --no-rdoc 
+gem install rspec-rails -v 2.0.0 --no-ri --no-rdoc 
+gem install cucumber -v 0.9.2 --no-ri --no-rdoc 
+gem install cucumber-rails -v 0.3.2 --no-ri --no-rdoc 
+gem install database_cleaner -v 0.5.2 --no-ri --no-rdoc 
+gem install webrat -v 0.7.2 --no-ri --no-rdoc 
+gem install selenium-client -v 1.2.18 --no-ri --no-rdoc 
+gem install rails -v 3.0.0 --no-ri --no-rdoc
+
 版本差异可能造成回馈信息细节有偏差, 代码应该都可通过
+
+### rvm 相同版本Ruby下使用不同版本RubyGems
+rvm install 1.8.7 -n rg137
+rvm 1.8.7-rg137
+gem update --system 1.3.7
+rvm install 1.8.7 -n rg142
+rvm 1.8.7-rg142
+gem update --system 1.4.2
 
 ***
 
